@@ -23,7 +23,7 @@ function Home(): React.JSX.Element {
   const { t } = useTranslation()
   const { sdkClient } = useCoreSdkProvider()
   const search = useSearch()
-  const { data: counters, isLoading: isLoadingCounters } = useListCounters()
+  const { isLoading: isLoadingCounters } = useListCounters()
 
   const { adapters, SearchWithNav } = useResourceFilters({
     instructions: makeInstructions({})
@@ -106,10 +106,6 @@ function Home(): React.JSX.Element {
       </SkeletonTemplate>
     </HomePageLayout>
   )
-}
-
-function formatCounter(counter = 0): string {
-  return `(${Intl.NumberFormat().format(counter)})`
 }
 
 export default Home
