@@ -46,14 +46,14 @@ const OrderList: FC = () => {
 
   return (
     <PageLayout
-      title={viewTitle ?? presets.history.viewTitle}
+      title={"Abandoned Carts"}
       mode={mode}
       gap='only-top'
       navigationButton={{
         onClick: () => {
           setLocation(appRoutes.home.makePath({}))
         },
-        label: t('resources.orders.name_other'),
+        label: "Cart Radar",
         icon: 'arrowLeft'
       }}
     >
