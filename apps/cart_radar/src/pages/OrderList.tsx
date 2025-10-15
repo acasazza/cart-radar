@@ -82,7 +82,7 @@ const OrderList: FC = () => {
               sort_by: isPendingOrdersList
                 ? 'order.updated_at'
                 : 'order.placed_at',
-              fields: ['order.*', 'billing_address.*', 'market.*']
+              fields: ['order.*', 'billing_address.*', 'market.*', 'tags.*'],
             }
           }}
           hideTitle={viewTitle === presets.pending.viewTitle}

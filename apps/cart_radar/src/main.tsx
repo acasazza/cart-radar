@@ -5,8 +5,7 @@ import {
   MetaTags,
   TokenProvider,
   createApp,
-  type ClAppProps,
-  type TokenProviderAllowedAppSlug
+  type ClAppProps
 } from '@commercelayer/app-elements'
 import { StrictMode } from 'react'
 import { SWRConfig } from 'swr'
@@ -18,8 +17,6 @@ import '@commercelayer/app-elements/style.css'
 
 const isDev = Boolean(import.meta.env.DEV)
 
-const appSlug: TokenProviderAllowedAppSlug = 'my_sample_app'
-
 const Main = (props: ClAppProps): React.JSX.Element => (
   <StrictMode>
     <ErrorBoundary hasContainer>
@@ -29,8 +26,8 @@ const Main = (props: ClAppProps): React.JSX.Element => (
         }}
       >
         <TokenProvider
-          kind='generic'
-          appSlug={appSlug}
+          kind='orders'
+          appSlug='cart_radar'
           devMode={isDev}
           loadingElement={<div />}
           {...props}
@@ -49,4 +46,4 @@ const Main = (props: ClAppProps): React.JSX.Element => (
 
 export default Main
 
-createApp(Main, appSlug)
+createApp(Main, 'cart_radar')

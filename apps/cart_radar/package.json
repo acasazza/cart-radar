@@ -1,17 +1,7 @@
 {
   "private": true,
-  "name": "app-my_sample_app",
-  "description": "A Commerce Layer Single Page Application.",
+  "name": "app-cart-radar",
   "version": "3.12.0",
-  "license": "MIT",
-  "keywords": [
-    "reactjs",
-    "jamstack",
-    "headless",
-    "ecommerce",
-    "api",
-    "commercelayer"
-  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -21,13 +11,14 @@
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "ts:check": "tsc --noEmit",
     "test": "vitest run --passWithNoTests",
-    "test:watch": "vitest --passWithNoTests",
-    "prepare": "touch ./public/config.local.js"
+    "test:watch": "vitest --passWithNoTests"
   },
   "dependencies": {
     "@commercelayer/app-elements": "6.2.2",
     "@commercelayer/sdk": "^6.46.0",
     "@hookform/resolvers": "^3.10.0",
+    "dashboard-apps-common": "workspace:*",
+    "date-fns": "^4.1.0",
     "lodash-es": "^4.17.21",
     "react": "19.1.1",
     "react-dom": "19.1.1",
@@ -45,7 +36,6 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
-    "cronstrue": "^3.3.0",
     "eslint": "^8.57.1",
     "i18next": "^25.5.2",
     "jsdom": "^27.0.0",
@@ -54,8 +44,5 @@
     "vite": "^7.1.6",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
-  },
-  "engines": {
-    "node": ">=20"
   }
 }

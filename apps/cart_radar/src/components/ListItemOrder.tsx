@@ -29,7 +29,8 @@ export function ListItemOrder({
       isLoading={isLoading}
       delayMs={delayMs}
       {...navigateTo({
-        app: 'orders',
+        // @ts-expect-error
+        app: 'cart_radar',
         resourceId: resource.id
       })}
     />

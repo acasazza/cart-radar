@@ -119,9 +119,9 @@ export const apps = {
     kind: 'subscriptions',
     icon: 'calendarCheck'
   },
-  whatever_you_want: {
-    name: 'My sample app',
-    slug: 'my_sample_app',
+  cart_radar: {
+    name: 'Cart Radar',
+    slug: 'cart_radar',
     kind: 'generic',
     icon: 'appWindow'
   }

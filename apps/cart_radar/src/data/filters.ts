@@ -1,5 +1,5 @@
-import { t, type FiltersInstructions } from '@commercelayer/app-elements'
-import isEmpty from 'lodash-es/isEmpty'
+import { t, type FiltersInstructions } from '@commercelayer/app-elements';
+import isEmpty from 'lodash-es/isEmpty';
 
 export type CountryCodesFilterOptions = Array<{ label: string; value: string }>
 
@@ -264,6 +264,26 @@ export const makeCartsInstructions = (): FiltersInstructions => [
       }
     },
     hidden: true
+  },
+  {
+    label: t('resources.tags.name_other'),
+    type: 'options',
+    sdk: {
+      predicate: 'tags_id_in',
+      defaultOptions: ['JrWXflvMpq']
+    },
+    render: {
+      component: 'inputResourceGroup',
+      props: {
+        fieldForLabel: 'name',
+        fieldForValue: 'id',
+        resource: 'tags',
+        searchBy: 'name_cont',
+        sortBy: { attribute: 'name', direction: 'asc' },
+        previewLimit: 5,
+        showCheckboxIcon: false
+      }
+    }
   },
   {
     label: t('apps.orders.attributes.payment_status'),
