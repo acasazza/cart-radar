@@ -1,0 +1,63 @@
+{
+  "name": "app-imports",
+  "description": "A Commerce Layer Single Page Application to import resources with a nice GUI.",
+  "version": "3.12.0",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "reactjs",
+    "jamstack",
+    "headless",
+    "ecommerce",
+    "api",
+    "imports",
+    "commercelayer"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --fix --ext .ts,.tsx",
+    "ts:check": "tsc --noEmit",
+    "test": "pnpm run lint && vitest run --passWithNoTests",
+    "test:watch": "vitest --passWithNoTests"
+  },
+  "dependencies": {
+    "@commercelayer/app-elements": "6.2.2",
+    "@commercelayer/eslint-config-ts-react": "^2.2.0",
+    "@commercelayer/sdk": "6.46.0",
+    "@vitejs/plugin-react": "^5.0.3",
+    "lodash-es": "^4.17.21",
+    "papaparse": "^5.5.3",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-select": "^5.10.2",
+    "wouter": "^3.7.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@commercelayer/app-builder": "workspace:*",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "22.13.4",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "dotenv": "^17.2.2",
+    "eslint": "^8.57.1",
+    "i18next": "^25.5.2",
+    "jsdom": "^27.0.0",
+    "rollup-plugin-external-globals": "^0.13.0",
+    "type-fest": "^5.0.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.6",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
