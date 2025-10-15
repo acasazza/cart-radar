@@ -7,8 +7,8 @@ from = "/:appSlug/*"
 to = "/:appSlug/index.html"
 status = 200
 [template.environment]
-PUBLIC_SELF_HOSTED_SLUG = "Your organization slug"
+PUBLIC_SELF_HOSTED_SLUG = "the-orange-brand-137"
 [[headers]]
-for = "/*" # you can configure the correct paths here
+for = "/cart_radar" # you can configure the correct paths here
 [headers.values]
 access-control-allow-origin = "*" # see a list of allowed values here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
